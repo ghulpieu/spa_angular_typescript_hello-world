@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
@@ -6,6 +6,11 @@ import { AuthService } from '@auth0/auth0-angular';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  private auth = inject(AuthService);
   isAuth0Loading$ = this.auth.isLoading$;
+
+  constructor(private _auth: AuthService) {}
+
+  get auth() {
+    return this._auth;
+  }
 }

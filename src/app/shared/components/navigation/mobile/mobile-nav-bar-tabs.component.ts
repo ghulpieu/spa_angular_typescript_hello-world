@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, inject } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
@@ -7,8 +7,13 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class MobileNavBarTabsComponent {
   @Output() mobileNavBarTabClick = new EventEmitter<string>();
-  private auth = inject(AuthService);
   isAuthenticated$ = this.auth.isAuthenticated$;
+
+  constructor(private _auth: AuthService) {}
+
+  get auth() {
+    return this._auth;
+  }
 
   onMobileNavBarTabClick(path: string): void {
     this.mobileNavBarTabClick.emit(path);

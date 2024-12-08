@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
@@ -6,6 +6,11 @@ import { AuthService } from '@auth0/auth0-angular';
   templateUrl: './nav-bar-tabs.component.html',
 })
 export class NavBarTabsComponent {
-  private auth = inject(AuthService);
   isAuthenticated$ = this.auth.isAuthenticated$;
+
+  constructor(private _auth: AuthService) {}
+
+  get auth() {
+    return this._auth;
+  }
 }
