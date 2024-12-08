@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "env": "ts-node set-env.ts",
+    "env": "tsx set-env.ts",
     "start": "npm run env && ng serve",
     "build": "npm run env && ng build",
     "watch": "ng build --watch --configuration development",
@@ -56,6 +56,7 @@
     "prettier": "^3.4.2",
     "prettier-eslint": "^16.3.0",
     "ts-node": "^10.9.1",
+    "tsx": "^4.19.2",
     "typescript": "~5.4.2",
     "typescript-eslint": "8.17.0"
   }
