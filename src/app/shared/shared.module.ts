@@ -17,12 +17,7 @@ import { SignupButtonComponent } from './components/buttons/signup-button.compon
     LogoutButtonComponent,
     SignupButtonComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    ...COMPONENTS
-  ],
+  imports: [CommonModule, RouterModule],
+  exports: [...COMPONENTS],
 })
 export class SharedModule {}

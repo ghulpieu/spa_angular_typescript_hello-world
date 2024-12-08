@@ -30,9 +30,8 @@ import { NavigationEnd, Router } from '@angular/router';
   `,
 })
 export class MobileNavBarComponent implements OnInit {
-
   private router = inject(Router);
-  
+
   MobileMenuState = {
     OPEN: 'open',
     CLOSED: 'closed',

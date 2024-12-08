@@ -7,7 +7,7 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class MobileNavBarTabsComponent {
   @Output() mobileNavBarTabClick = new EventEmitter<string>();
-  private auth =  inject(AuthService)
+  private auth = inject(AuthService);
   isAuthenticated$ = this.auth.isAuthenticated$;
 
   onMobileNavBarTabClick(path: string): void {

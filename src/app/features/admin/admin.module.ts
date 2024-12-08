@@ -15,6 +15,6 @@ import { AdminComponent } from './admin.component';
         component: AdminComponent,
       },
     ]),
-  ]
+  ],
 })
 export class AdminModule {}

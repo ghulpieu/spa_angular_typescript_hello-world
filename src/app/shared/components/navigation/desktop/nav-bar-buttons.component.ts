@@ -6,7 +6,6 @@ import { AuthService } from '@auth0/auth0-angular';
   templateUrl: './nav-bar-buttons.component.html',
 })
 export class NavBarButtonsComponent {
-  private auth = inject(AuthService)
+  private auth = inject(AuthService);
   isAuthenticated$ = this.auth.isAuthenticated$;
-
 }

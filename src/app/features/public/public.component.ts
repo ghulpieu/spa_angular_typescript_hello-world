@@ -6,7 +6,7 @@ import { MessageService } from '@app/core';
   templateUrl: './public.component.html',
 })
 export class PublicComponent implements OnInit {
-  private messageService = inject(MessageService)
+  private messageService = inject(MessageService);
   message = '';
 
   ngOnInit(): void {

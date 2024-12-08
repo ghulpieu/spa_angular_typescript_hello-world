@@ -4,13 +4,13 @@ import { CallbackComponent } from './callback.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: CallbackComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class CallbackRoutingModule { }
+export class CallbackRoutingModule {}

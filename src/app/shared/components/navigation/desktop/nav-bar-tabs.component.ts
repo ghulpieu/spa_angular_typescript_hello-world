@@ -8,5 +8,4 @@ import { AuthService } from '@auth0/auth0-angular';
 export class NavBarTabsComponent {
   private auth = inject(AuthService);
   isAuthenticated$ = this.auth.isAuthenticated$;
-
 }

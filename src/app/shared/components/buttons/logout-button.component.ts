@@ -10,8 +10,8 @@ import { DOCUMENT } from '@angular/common';
 })
 export class LogoutButtonComponent {
   private auth = inject(AuthService);
-  private doc = inject(DOCUMENT)
-  
+  private doc = inject(DOCUMENT);
+
   handleLogout(): void {
     this.auth.logout({
       logoutParams: {

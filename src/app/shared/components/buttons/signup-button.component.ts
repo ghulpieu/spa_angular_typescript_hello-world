@@ -8,7 +8,7 @@ import { AuthService } from '@auth0/auth0-angular';
   `,
 })
 export class SignupButtonComponent {
-  private auth = inject(AuthService)
+  private auth = inject(AuthService);
 
   handleSignUp(): void {
     this.auth.loginWithRedirect({

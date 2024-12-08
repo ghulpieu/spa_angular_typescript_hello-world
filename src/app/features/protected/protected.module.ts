@@ -15,6 +15,6 @@ import { ProtectedComponent } from './protected.component';
         component: ProtectedComponent,
       },
     ]),
-  ]
+  ],
 })
 export class ProtectedModule {}
