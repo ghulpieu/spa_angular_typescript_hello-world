@@ -12,6 +12,8 @@ import { NavigationEnd, Router } from '@angular/router';
         <span
           id="mobile-menu-toggle-button"
           (click)="toggleMobileMenu()"
+          (keydown)="toggleMobileMenu()"
+          tabindex="0"
           class="mobile-nav-bar__toggle material-icons"
         >
           {{ mobileMenuIcon }}
@@ -30,9 +32,6 @@ import { NavigationEnd, Router } from '@angular/router';
   `,
 })
 export class MobileNavBarComponent implements OnInit {
-
-  private router = inject(Router);
-  
   MobileMenuState = {
     OPEN: 'open',
     CLOSED: 'closed',
@@ -45,6 +44,8 @@ export class MobileNavBarComponent implements OnInit {
 
   mobileMenuState = this.MobileMenuState.CLOSED;
   mobileMenuIcon = this.MobileMenuIcon.MENU;
+
+  private router = inject(Router);
 
   ngOnInit() {
     this.router.events.subscribe((ev) => {

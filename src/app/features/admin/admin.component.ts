@@ -6,8 +6,8 @@ import { MessageService } from '@app/core';
   templateUrl: './admin.component.html',
 })
 export class AdminComponent implements OnInit {
-  private messageService = inject(MessageService);
   message = '';
+  private messageService = inject(MessageService);
 
   ngOnInit(): void {
     this.messageService.getAdminResource().subscribe((response) => {

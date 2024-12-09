@@ -5,10 +5,10 @@ import { ApiResponseModel, MessageModel, RequestConfigModel } from '../models';
 import { ExternalApiService } from './external-api.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MessageService {
-  private externalApiService = inject(ExternalApiService)
+  private externalApiService = inject(ExternalApiService);
 
   getPublicResource = (): Observable<ApiResponseModel> => {
     const config: RequestConfigModel = {
