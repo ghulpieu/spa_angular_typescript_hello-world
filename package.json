@@ -10,6 +10,12 @@
     "api": "json-server --host 0.0.0.0 --port 6060 --watch json-server/db.json --routes json-server/routes.json"
   },
   "private": true,
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/format"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "^18.0.0",
     "@angular/common": "^18.0.0",
@@ -29,6 +35,8 @@
     "@angular-devkit/build-angular": "^18.0.1",
     "@angular/cli": "~18.0.1",
     "@angular/compiler-cli": "^18.0.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/format": "^19.5.0",
     "@types/jasmine": "~4.0.0",
     "dotenv": "^16.0.1",
     "jasmine-core": "~4.1.0",
