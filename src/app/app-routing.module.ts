@@ -31,6 +31,13 @@ const routes: Routes = [
       import('./features/admin/admin.module').then((m) => m.AdminModule),
   },
   {
+    path: 'callback',
+    loadChildren: () =>
+      import('./features/callback/callback.module').then(
+        (m) => m.CallbackModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./features/not-found/not-found.module').then(
