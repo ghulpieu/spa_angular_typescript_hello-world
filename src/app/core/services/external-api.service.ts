@@ -5,10 +5,10 @@ import { catchError, mergeMap, Observable, of } from 'rxjs';
 import { ApiResponseModel, AppErrorModel, RequestConfigModel } from '../models';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ExternalApiService {
-  private http = inject(HttpClient)
+  private http = inject(HttpClient);
 
   callExternalApiWithAxios = async (options: {
     config: AxiosRequestConfig;
@@ -37,7 +37,11 @@ export class ExternalApiService {
           message = axiosError.message;
         }
 
-        if (response && response.data && (response.data as AppErrorModel).message) {
+        if (
+          response &&
+          response.data &&
+          (response.data as AppErrorModel).message
+        ) {
           message = (response.data as AppErrorModel).message;
         }
 
@@ -58,7 +62,9 @@ export class ExternalApiService {
     }
   };
 
-  callExternalApi = (config: RequestConfigModel): Observable<ApiResponseModel> => {
+  callExternalApi = (
+    config: RequestConfigModel
+  ): Observable<ApiResponseModel> => {
     return this.http
       .request<unknown>(config.method, config.url, config.headers)
       .pipe(

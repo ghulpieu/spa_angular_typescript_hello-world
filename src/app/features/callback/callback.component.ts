@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/member-ordering */
+
 import { Component, inject } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
@@ -7,5 +9,6 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class CallbackComponent {
   private auth = inject(AuthService);
+
   error$ = this.auth.error$;
 }

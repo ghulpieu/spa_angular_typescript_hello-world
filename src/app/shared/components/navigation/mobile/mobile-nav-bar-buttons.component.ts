@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/member-ordering */
+
 import { Component, inject } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 
@@ -6,6 +8,7 @@ import { AuthService } from '@auth0/auth0-angular';
   templateUrl: './mobile-nav-bar-buttons.component.html',
 })
 export class MobileNavBarButtonsComponent {
-  private auth = inject(AuthService)
+  private auth = inject(AuthService);
+
   isAuthenticated$ = this.auth.isAuthenticated$;
 }
