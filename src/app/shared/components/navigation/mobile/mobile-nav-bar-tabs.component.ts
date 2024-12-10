@@ -1,4 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+/* eslint-disable @typescript-eslint/member-ordering */
+
+import { Component, EventEmitter, Output, inject } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-mobile-nav-bar-tabs',
@@ -6,6 +9,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class MobileNavBarTabsComponent {
   @Output() mobileNavBarTabClick = new EventEmitter<string>();
+
+  private auth = inject(AuthService);
+
+  isAuthenticated$ = this.auth.isAuthenticated$;
 
   onMobileNavBarTabClick(path: string): void {
     this.mobileNavBarTabClick.emit(path);
