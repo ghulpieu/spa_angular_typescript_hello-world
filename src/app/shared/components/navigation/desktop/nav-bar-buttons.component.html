@@ -1,8 +1,8 @@
 <div class="nav-bar__buttons">
-  <ng-container *ngIf="isAuthenticated$ | async; else unAuthenticated">
+  <ng-container *ngIf="isAuthenticated$ | async; else loggedOut">
     <app-logout-button></app-logout-button>
   </ng-container>
-  <ng-template #unAuthenticated>
+  <ng-template #loggedOut>
     <app-signup-button></app-signup-button>
     <app-login-button></app-login-button>
   </ng-template>
