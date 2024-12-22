@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { COMPONENTS } from './components';
 import { LoginButtonComponent } from './components/buttons/login-button.component';
+import { SignupButtonComponent } from './components/buttons/signup-button.component';
 
 @NgModule({
   declarations: [
     ...COMPONENTS,
-    LoginButtonComponent
+    LoginButtonComponent,
+    SignupButtonComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
     ...COMPONENTS,
-    LoginButtonComponent
+    LoginButtonComponent,
+    SignupButtonComponent
   ],
 })
 export class SharedModule {}
